@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:profile/constFiles/color.dart';
 
 class ExpandedPoints extends StatelessWidget {
-  const ExpandedPoints({Key? key, required this.text}) : super(key: key);
+  const ExpandedPoints({Key? key, required this.text, this.haveIcon = true})
+      : super(key: key);
 
   final String text;
+  final bool haveIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +15,10 @@ class ExpandedPoints extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.arrow_right, color: lightGreen),
-          SizedBox(width: 10.0),
+          if (haveIcon) ...[
+            Icon(Icons.arrow_right, color: lightGreen),
+            SizedBox(width: 10.0),
+          ],
           Expanded(
             child: Text(text,
                 style: Theme.of(context)
