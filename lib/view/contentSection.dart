@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:profile/components/aboutSection.dart';
+import 'package:profile/components/educationSection.dart';
 import 'package:profile/components/experienceSection.dart';
 import 'package:profile/components/homeSection.dart';
+import 'package:profile/components/projectSection.dart';
 import 'package:profile/constFiles/responsove.dart';
 
 class ContentSection extends StatefulWidget {
@@ -34,11 +36,14 @@ class _ContentSectionState extends State<ContentSection> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HomeSection(key: homeKey, size: size),
-            SizedBox(height: 20.0),
             AboutSection(key: aboutKey),
-            SizedBox(height: 20.0),
+            EducationSection(),
             ExperienceSection(key: experienceKey),
-          ],
+            ProjectSection()
+          ]
+              .map((e) =>
+                  Padding(padding: EdgeInsets.only(bottom: 20.0), child: e))
+              .toList(),
         ),
       ),
     );
