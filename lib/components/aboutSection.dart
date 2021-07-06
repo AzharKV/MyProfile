@@ -52,11 +52,10 @@ class AboutSection extends StatelessWidget {
         Wrap(
           alignment: WrapAlignment.start,
           children: [
-
-            Points(text: "FireBase Technology"),
             Points(text: "Api Integration"),
+            Points(text: "FireBase Technology"),
             Points(text: "Adobe Xd"),
-            Points(text: "Local DataBase: SQFlite, Hive"),
+            Points(text: "DataBase: SQFlite, Hive, MySql"),
             Points(text: "StateManagement: Provider, GetX"),
           ],
         ),
