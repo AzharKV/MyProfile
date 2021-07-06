@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:profile/constFiles/color.dart';
 import 'package:profile/constFiles/constVariables.dart';
 import 'package:profile/constFiles/responsove.dart';
-import 'package:profile/widgets/expandingPoints.dart';
 import 'package:profile/widgets/headingBar.dart';
 import 'package:profile/widgets/points.dart';
 
@@ -38,36 +37,27 @@ class AboutSection extends StatelessWidget {
                 .textTheme
                 .headline6!
                 .merge(TextStyle(color: textColor2))),
-        Wrap(alignment: WrapAlignment.start, children: [
-          Points(
-            text: "Flutter",
-          ),
-          Points(text: "Android ( Java )"),
-          Points(text: "Web ( HTML, CSS, JavaScript )")
-        ]),
+        Wrap(
+          children: [
+            Points(text: "Flutter"),
+            Points(text: "Android ( Java )"),
+            Points(text: "Web ( HTML, CSS, JavaScript )")
+          ],
+        ),
         Text("Here Are A Few Skills & Technologies:-",
             style: Theme.of(context)
                 .textTheme
                 .headline6!
                 .merge(TextStyle(color: textColor2))),
-        Wrap(alignment: WrapAlignment.start, children: [
-          Points(text: "Adobe Xd"),
-          Points(text: "Flare Animation ( Rive )"),
-          Points(text: "FireBase"),
-          Points(text: "Local DataBase: SQFlite, Hive"),
-        ]),
-        SizedBox(height: 20.0),
-        HeadingBar(text: "Education."),
         Wrap(
           alignment: WrapAlignment.start,
           children: [
-            ExpandedPoints(
-                text:
-                    "Bachelor Of Computer Application ( 2017 - 2020 ), Calicut University"),
-            ExpandedPoints(
-                text:
-                    "Business Analysis Certification Program (IIBA - ECBA) ( Udemy )"),
-            ExpandedPoints(text: "Flutter Development Online Course"),
+
+            Points(text: "FireBase Technology"),
+            Points(text: "Api Integration"),
+            Points(text: "Adobe Xd"),
+            Points(text: "Local DataBase: SQFlite, Hive"),
+            Points(text: "StateManagement: Provider, GetX"),
           ],
         ),
       ],

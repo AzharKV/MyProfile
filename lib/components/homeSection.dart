@@ -64,7 +64,7 @@ class HomeSection extends StatelessWidget {
                           "I'm a flutter developer who specializes in building (and occasionally designing)"
                           " exceptional digital experiences. Currently, I'm a developer at "),
                   TextSpan(
-                      text: "Utech Solutions",
+                      text: "UmerTech Solutions",
                       style: TextStyle(color: lightGreen)),
                   TextSpan(
                       text: " focused on "
