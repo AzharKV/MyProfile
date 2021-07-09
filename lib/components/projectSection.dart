@@ -5,6 +5,7 @@ import 'package:profile/widgets/expandingPoints.dart';
 import 'package:profile/widgets/headingBar.dart';
 import 'package:profile/widgets/customNetworkImage.dart';
 import 'package:profile/widgets/projectItem.dart';
+import 'package:profile/widgets/urlLaunchText.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectSection extends StatelessWidget {
@@ -48,14 +49,9 @@ class ProjectSection extends StatelessWidget {
                 haveIcon: false,
                 text:
                     "Flutter FrameWork, Hive Database, GetX State Management, MVC Architecture"),
-            InkWell(
-              onTap: () => launch("https://github.com/AzharKV/Closho"),
-              child: Text("Click Here For GitHub Link And To Learn More...",
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle1!
-                      .merge(TextStyle(color: textColor2))),
-            ),
+            UrlLaunchText(
+                url: "https://github.com/AzharKV/Closho",
+                text: "Click Here For GitHub Link And To Learn More..."),
             Wrap(
               alignment: WrapAlignment.center,
               children: [
@@ -85,14 +81,9 @@ class ProjectSection extends StatelessWidget {
                 haveIcon: false,
                 text:
                     "Flutter FrameWork, SQFlite Database, Provider State Management, MVC Architecture"),
-            InkWell(
-              onTap: () => launch("https://github.com/AzharKV/Money_Manager"),
-              child: Text("Click Here For GitHub Link And To Learn More...",
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle1!
-                      .merge(TextStyle(color: textColor2))),
-            ),
+            UrlLaunchText(
+                url: "https://github.com/AzharKV/Money_Manager",
+                text: "Click Here For GitHub Link And To Learn More..."),
             Wrap(
               alignment: WrapAlignment.center,
               children: [
@@ -122,14 +113,9 @@ class ProjectSection extends StatelessWidget {
                 haveIcon: false,
                 text:
                     "Flutter FrameWork, NewsApi.org Api, GetX State Management, MVC Architecture"),
-            InkWell(
-              onTap: () => launch("https://github.com/AzharKV/NewsWorld"),
-              child: Text("Click Here For GitHub Link And To Learn More...",
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle1!
-                      .merge(TextStyle(color: textColor2))),
-            ),
+            UrlLaunchText(
+                url: "https://github.com/AzharKV/NewsWorld",
+                text: "Click Here For GitHub Link And To Learn More..."),
             Wrap(
               alignment: WrapAlignment.center,
               children: [
@@ -158,15 +144,9 @@ class ProjectSection extends StatelessWidget {
             ExpandedPoints(
                 haveIcon: false,
                 text: "Flutter Responsive Web, Tablet, Mobile Dashboard UI."),
-            InkWell(
-              onTap: () =>
-                  launch("https://github.com/AzharKV/Responsive_DashBoard"),
-              child: Text("Click Here For GitHub Link And To Learn More...",
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle1!
-                      .merge(TextStyle(color: textColor2))),
-            ),
+            UrlLaunchText(
+                url: "https://github.com/AzharKV/Responsive_DashBoard",
+                text: "Click Here For GitHub Link And To Learn More..."),
             Wrap(
               alignment: WrapAlignment.center,
               children: [

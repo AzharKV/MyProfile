@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:profile/constFiles/color.dart';
 import 'package:profile/constFiles/constVariables.dart';
 import 'package:profile/widgets/iconWidgetButton.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LeftSection extends StatelessWidget {
   const LeftSection({Key? key}) : super(key: key);
@@ -19,11 +20,17 @@ class LeftSection extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconWidgetButton(icon: FontAwesomeIcons.github, onPress: () {}),
               IconWidgetButton(
-                  icon: FontAwesomeIcons.instagram, onPress: () {}),
+                  icon: FontAwesomeIcons.github,
+                  onPress: () =>
+                      launch("https://github.com/AzharKV?tab=repositories")),
               IconWidgetButton(
-                  icon: FontAwesomeIcons.linkedinIn, onPress: () {}),
+                  icon: FontAwesomeIcons.instagram,
+                  onPress: () =>
+                      launch("https://www.instagram.com/azhar__kv/")),
+              IconWidgetButton(
+                  icon: FontAwesomeIcons.linkedinIn,
+                  onPress: () => launch("https://www.linkedin.com/in/azharkv")),
               AnimatedContainer(
                 color: iconColor,
                 width: 1,

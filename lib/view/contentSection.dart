@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:profile/components/aboutSection.dart';
@@ -5,7 +6,9 @@ import 'package:profile/components/educationSection.dart';
 import 'package:profile/components/experienceSection.dart';
 import 'package:profile/components/homeSection.dart';
 import 'package:profile/components/projectSection.dart';
+import 'package:profile/constFiles/color.dart';
 import 'package:profile/constFiles/responsove.dart';
+import 'package:profile/widgets/urlLaunchText.dart';
 
 class ContentSection extends StatefulWidget {
   @override
@@ -49,7 +52,37 @@ class _ContentSectionState extends State<ContentSection> {
               EducationSection(),
               ExperienceSection(key: experienceKey)
             ],
-            ProjectSection()
+            ProjectSection(),
+            Align(
+              alignment: Alignment.center,
+              child: Wrap(
+                children: [
+                  UrlLaunchText(
+                      url: "https://github.com/AzharKV?tab=repositories",
+                      text: "GitHub"),
+                  SizedBox(width: 10.0),
+                  UrlLaunchText(
+                      url: "https://www.instagram.com/azhar__kv/",
+                      text: "Instagram"),
+                  SizedBox(width: 10.0),
+                  UrlLaunchText(
+                      url: "https://www.linkedin.com/in/azharkv",
+                      text: "LinkedIn"),
+                  SizedBox(width: 10.0),
+                  UrlLaunchText(
+                      url: "https://mailto:mohammedazharkv@gmail.com",
+                      text: "G-Mail"),
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text("ThankYou",
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle1!
+                      .merge(TextStyle(color: textColor2))),
+            )
           ]
               .map((e) =>
                   Padding(padding: EdgeInsets.only(bottom: 20.0), child: e))
