@@ -37,8 +37,18 @@ class _ContentSectionState extends State<ContentSection> {
           children: [
             HomeSection(key: homeKey, size: size),
             AboutSection(key: aboutKey),
-            EducationSection(),
-            ExperienceSection(key: experienceKey),
+            if (Responsive.isDesktop(context))
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(child: ExperienceSection(key: experienceKey)),
+                  Expanded(child: EducationSection()),
+                ],
+              ),
+            if (!Responsive.isDesktop(context)) ...[
+              EducationSection(),
+              ExperienceSection(key: experienceKey)
+            ],
             ProjectSection()
           ]
               .map((e) =>
